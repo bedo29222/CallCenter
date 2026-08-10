@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Call center MVP v1</title>
+    <title>ERP-ABHD MVP</title>
+    
+    <!-- 1. Browser Tab Logo (Favicon) -->
+    <link rel="icon" type="image/png" href="https://i.ibb.co/Y7Rj4Y1M/DRS-LOGO-02.png">
+    <!-- 2. Apple Touch Icon (shows if users save the site to their iOS home screen) -->
+    <link rel="apple-touch-icon" href="https://i.ibb.co/Y7Rj4Y1M/DRS-LOGO-02.png">
+    
+    <!-- 3. Theme color (tints the top browser bar on mobile devices) -->
+    <meta name="theme-color" content="#ffffff">
+
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
-            overflow: hidden; 
+            overflow: hidden;
+            /* 4. Background color hides the stark white flash before the Apps Script loads */
+            background-color: #f3f4f6; 
         }
         iframe {
             position: absolute;
@@ -19,10 +30,16 @@
             width: 100%;
             height: 100%;
             border: none;
+            /* 5. display: block prevents minor scroll/whitespace rendering bugs in some browsers */
+            display: block; 
         }
     </style>
 </head>
 <body>
-    <iframe src="https://script.google.com/macros/s/AKfycbwjz_70awSbdDEwmnYyZnSs0l0tJeKc334oEW16O0lcER898sFr_4InS-O6kROSOxzi/exec"></iframe>
+    <!-- 6. Added "allow" permissions commonly needed by ERPs (copy/paste, fullscreen) -->
+    <iframe 
+        src="https://script.google.com/a/*/macros/s/AKfycbxQIF3AvKylZcVG-xlNeSimtlHTKjnSgsyqaXFCK6Nt8KDQg0fqWWcmuqTaHWz5ylVq/exec"
+        allow="fullscreen; clipboard-read; clipboard-write; camera; microphone">
+    </iframe>
 </body>
 </html>
